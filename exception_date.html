@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try-catch</title>
+</head>
+<body>
+
+  <!-- <h1>JavaScript Statements</h1>
+  <h2>The throw Statement</h2>
+  <p>Please input a number between 5 and 10:</p>
+
+  <input id="input" type="text" >
+  <button type="submit" onclick="myFunction()">Test Input</button>
+
+  <p id="error"></p> -->
+
+  <p id="time"></p>
+
+  <script>
+    const date = new Date();
+    let day = date.getDate();
+    let weekday = date.getDay();
+
+    document.getElementById("time").innerHTML = 'Today is '+ day;
+    
+    const weekdayConvert = new Map([
+      [0,"Sunday"],
+      [1,"Monday"],
+      [2,"Tuesday"],
+      [3,"Wednesday"],
+      [4,"Thursday"],
+      [5,"Friday"],
+      [6,"Saturday"]
+    ]);
+
+    // steps to create a <tag> and its content to html
+    // create <p>
+    let p = document.createElement("p");
+    // assign p id
+    p.id = "day";
+    // add content to <p>
+    p.textContent = "Today is "+ weekdayConvert.get(weekday);
+    // add <p> to the end of body
+    document.body.appendChild(p);
+
+    // function myFunction(){
+    //   const error = document.getElementById("error");
+    //   error.innerHTML = "";
+    //   let x = document.getElementById("input").value;
+    //   try {
+    //     if(x == "") throw "is Empty";
+    //     if(isNaN(x)) throw "not a number";
+    //     if(x<5) throw "too low";
+    //     if(x>10) throw "too high";
+    //   } catch (err) {
+    //     error.innerHTML = "Input " + err; 
+    //   }
+    // }
+  </script>
+</body>
+</html>
