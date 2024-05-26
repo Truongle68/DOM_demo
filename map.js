@@ -19,7 +19,8 @@ const ageMap = new Map([
   ['John',20],
   ['June',23],
   ['July',19],
-  ['Mask',21]
+  ['Mask',21],
+  ['Masked',24]
 ]);
 //get keys
 console.log(ageMap.keys());
